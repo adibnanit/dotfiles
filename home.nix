@@ -102,7 +102,7 @@
       v = "nvim";
       vi = "nvim";
       ".." = "cd ..";
-      hme = "nvim ~/.config/home-manager/home.nix";
+      hme = "cd ~/.config/home-manager/ && nvim home.nix";
       hms = "home-manager switch";
     };
   };
