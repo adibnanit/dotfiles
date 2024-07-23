@@ -138,6 +138,12 @@
         format = "[ JVM $version ]($style)";
       };
 
+      python = {
+        disabled = false;
+        style = "fg:#ffffff bg:#f4a261";
+        format = "[ Python $version $virtualenv]($style)";
+      };
+
       lua = {
         disabled = false;
         style = "fg:#ffffff bg:#f4a261";
