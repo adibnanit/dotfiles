@@ -23,6 +23,7 @@
     pkgs.zsh
     pkgs.lsd
     pkgs.bat
+    pkgs.tmux
     pkgs.kubecolor
     pkgs.ripgrep
     pkgs.tree
@@ -58,6 +59,9 @@
 
     ".config/nvim".source = ./nvim-config;
     ".config/nvim".recursive = true;
+
+    ".config/tmux".source = ./tmux-config;
+    ".config/tmux".recursive = true;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
