@@ -39,6 +39,9 @@
     pkgs.kubectl
     pkgs.ruby
     pkgs.openssl_3_3
+    pkgs.terraform
+    pkgs.taskwarrior3
+    pkgs.taskwarrior-tui
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -123,7 +126,7 @@
     settings = {
       add_newline = true;
 
-      format = '' $kubernetes[](bg:#2a9d8f fg:#264653)$directory[](fg:#2a9d8f bg:#e9c46a)$git_branch$git_status[](fg:#e9c46a bg:#f4a261)$rust$scala$java$python$lua$nodejs[](fg:#f4a261 bg:#e76f51)[ ](fg:#e76f51)$fill [](#e76f51)$time[](bg:#e76f51 fg:#f4a261)[](bg:#f4a261 fg:#e9c46a)[](bg:#e9c46a fg:#2a9d8f)$memory_usage[](bg:#2a9d8f fg:#264653)$nix_shell$line_break$character'';
+      format = '' $kubernetes[](bg:#2a9d8f fg:#264653)$directory[](fg:#2a9d8f bg:#e9c46a)$git_branch$git_status[](fg:#e9c46a bg:#f4a261)$rust$scala$java$python$lua$nodejs[](fg:#f4a261 bg:#e76f51)[ ](fg:#e76f51)$fill [](#e76f51)$time[](bg:#e76f51 fg:#f4a261)[](bg:#f4a261 fg:#e9c46a)[](bg:#e9c46a fg:#2a9d8f)[](bg:#2a9d8f fg:#264653)$nix_shell$line_break$character'';
 
       nix_shell = {
         disabled = false;
@@ -216,6 +219,11 @@
         format = "[  $time ]($style)";
       };
 
+      rust = {
+        disabled = false;
+        style = "fg:#ffffff bg:#f4a261";
+        format = "[ rust $version ]($style)";
+      };
 
     };
   };
